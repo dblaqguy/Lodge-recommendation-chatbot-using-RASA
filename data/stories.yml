@@ -1,0 +1,13 @@
+version: "3.1"
+
+stories:
+
+  - story: ask for location
+    steps:
+      - intent: search_lodge
+      - action: action_ask_lodge_question
+
+  - story: ask question and continue
+    steps:
+      - intent: provide_information
+      - action: action_ask_lodge_question

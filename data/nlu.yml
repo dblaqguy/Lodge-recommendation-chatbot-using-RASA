@@ -1,0 +1,82 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - Hi
+      - Hey
+      - Hello
+
+  - intent: search_lodge
+    examples: |
+      - I need a lodge
+      - Can you help me find a lodge?
+      - I am looking for accommodation
+      - I want to search for a lodge
+      - Help me find a hostel
+      - Can you recommend a lodge?
+      - I need a place to stay
+      - I want to find a lodge in FUNAI
+
+  - intent: provide_information
+    examples: |
+      - Front Gate
+      - junction will be fine
+      - Single room
+      - I prefer self-contain
+      - ₦150000
+      - I can pay ₦100,000
+      - WiFi and parking space
+      - I want a lodge with WiFi and water
+      - Any lodge with balcony
+      - I want a lodge close to market
+      - not far from school
+      - My budget is ₦200000
+
+  # - intent: provide_location
+  #   examples: |
+  #     - Are there any lodges in [Front Gate](location)?
+  #     - I need accommodation in [Main Gate](location)
+  #     - Any lodge around [Ezzamgbo](location)?
+  #     - Is there a hostel near [Back Gate](location)?
+  #     - [junction](location)
+  #     - [Nwakpu](location)
+
+  # - intent: provide_lodge_type
+  #   examples: |
+  #       - [self-contain](lodge_type)
+  #       - I like [single room](lodge_type)
+  #       - [bungalow](lodge_type)?
+  #       - I prefer [self-contain](lodge_type)
+
+  # - intent: provide_price
+  #   examples: |
+  #     - I can pay up to 150000
+  #     - My budget is 100000
+  #     - at most ₦250000
+  #     - around ₦80,000 naira
+  #     - not more than 120000
+  #     - I can afford 150000
+  #     - 190000
+
+  # - intent: provide_amenities
+  #   examples: |
+  #     - I want a lodge with WiFi
+  #     - Find me a place with water and parking
+  #     - Show me lodges with balcony
+  #     - I want a place with laundry and football field
+  #     - Any lodge with air conditioning?
+  #     - Any lodge with security camera and WiFi
+  #     - Looking for a place with fenced and laundry
+  #     - Find me a place with generator and water
+  #     - Any lodge with WiFi, water, and parking?
+  #     - Looking for a place with water, fenced, and balcony
+  #     - wifi, water, light
+
+  # - regex: location
+  #   examples: |
+  #     - (?i)(front gate|main gate|back gate|ezzamgbo|junction|nwakpu)
+
+  # - regex: lodge_type
+  #   examples: |
+  #     - (?i)(self-contain|single room|bungalow)

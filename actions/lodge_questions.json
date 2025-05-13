@@ -1,0 +1,22 @@
+[
+  {
+    "slot": "location",
+    "question": "Where do you need the lodge?"
+  },
+  {
+    "slot": "lodge_type",
+    "question": "What type of lodge do you need?"
+  },
+  {
+    "slot": "price",
+    "question": "What is your price range or budget?"
+  },
+  {
+    "slot": "amenities",
+    "question": "What amenities do you want in the lodge?"
+  },
+  {
+    "slot": "preferences",
+    "question": "Do you have any other preferences?"
+  }
+]

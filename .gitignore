@@ -1,0 +1,26 @@
+# Python virtual environment
+rasa_env/
+
+# Rasa cache and logs
+.rasa/
+
+#bot test results
+results/
+
+# Rasa model files
+
+# Python junk
+__pycache__/
+*.pyc
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+tests/
+
+models/
+
+runtime.txt

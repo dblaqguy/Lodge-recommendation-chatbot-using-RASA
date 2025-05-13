@@ -1,0 +1,85 @@
+version: "3.1"
+
+intents:
+  - greet
+  - search_lodge
+  - provide_information
+  # - provide_location
+  # - provide_lodge_type
+  # - provide_price
+  # - provide_amenities
+
+# entities:
+#   # - location
+#   # - lodge_type
+
+slots:
+  location:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: custom
+
+  price:
+    type: float
+    initial_value: 0
+    influence_conversation: true
+    mappings:
+      - type: custom
+
+  lodge_type:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  amenities:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  preferences:
+    type: list
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+  question_index:
+    type: float
+    initial_value: 0
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+
+responses:
+  utter_greet:
+    - text: Hey there! How can I assist you today?
+    - text: Hello! What can I do for you?
+
+  # utter_ask_location:
+  #   - text: Where would you like to search for lodges?
+  #   - text: Where do you need the lodge?
+
+  # utter_ask_lodge_type:
+  #   - text: What type of lodge do you need?
+  #   - text: Do you prefer a single room or a self-contain?
+  #   - text: What is your preferred type of accomodation?
+
+  # utter_ask_price:
+  #   - text: What's your budget or preferred price range?
+  #   - text: How much are you willing to pay for the lodge?
+
+  # utter_ask_amenities:
+  #   - text: What amenities are you looking for in a lodge?
+  #   - text: Can you tell me which amenities you need?
+  #   - text: What kind of features would you like in your lodge? For example, WiFi, kitchen, etc.
+  #   - text: Tell me all the amenities that matter to you, and I'll find a suitable place."
+
+  # utter_submit:
+  #   - text: Thanks! Searching for lodges...
+  #   - text: "Checking for available lodge that match your requests..."
+
+actions:
+  - action_ask_lodge_question

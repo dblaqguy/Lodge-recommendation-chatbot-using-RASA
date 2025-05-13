@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: rasa-web-service
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: rasa run --enable-api --port $PORT --cors "*" --debug
+    envVars:
+      - key: PORT
+        value: 5005
+    plan: free
