@@ -20,63 +20,55 @@ nlu:
 
   - intent: provide_information
     examples: |
-      - Front Gate
-      - junction will be fine
-      - Single room
-      - I prefer self-contain
-      - ₦150000
-      - I can pay ₦100,000
-      - WiFi and parking space
-      - I want a lodge with WiFi and water
-      - Any lodge with balcony
-      - I want a lodge close to market
-      - not far from school
-      - My budget is ₦200000
+      - I want a lodge in [front gate](location)
+      - Any lodge near [back gate](location)
+      - Show me lodges in [nwakpu](location)
+      - any lodge in [ezzamgbo](location)
+      - I need a place at [junction](location)
+      - any available lodge in [college](location)
+      - I prefer a [single room](lodge_type)
+      - I want a [self-contain](lodge_type)
+      - Can I get a [bungalow](lodge_type)
+      - My budget is [₦150000](price)
+      - lodge of [190,000](price)
+      - I can afford [200000](price) naira
+      - I want a lodge with [WiFi](amenities) and [parking](amenities)
+      - Any lodge with [balcony](amenities)?
+      - Can you recommend a place with [balcony](amenities) and [gym](amenities)?
+      - Find a lodge with [parking space](amenities) and [generator](amenities)
+      - Show me places with [cafeteria](amenities) and [football field](amenities)
+      - Find me a place with [generator](amenities) and [water](amenities)
+      - Any lodge with [WiFi](amenities), [water](amenities)?
+      - Looking for a place with [water](amenities), [fenced](amenities), and [balcony](amenities)
+      - I want a lodge [close to market](preferences)
+      - not far from [school](preferences)
+      - I can pay [₦100,000](price)
+      - I need a [self-contain](lodge_type)
+      - I prefer a [quiet](preferences) lodge
+      - I want a place with [easy access](preferences)
+      - I want an [affordable](preferences) lodge
+      - The lodge should be [spacious](preferences)
+      - The lodge should be [study-friendly](preferences)
+      - A [relaxing](preferences) environment would be nice
 
-  # - intent: provide_location
-  #   examples: |
-  #     - Are there any lodges in [Front Gate](location)?
-  #     - I need accommodation in [Main Gate](location)
-  #     - Any lodge around [Ezzamgbo](location)?
-  #     - Is there a hostel near [Back Gate](location)?
-  #     - [junction](location)
-  #     - [Nwakpu](location)
 
-  # - intent: provide_lodge_type
-  #   examples: |
-  #       - [self-contain](lodge_type)
-  #       - I like [single room](lodge_type)
-  #       - [bungalow](lodge_type)?
-  #       - I prefer [self-contain](lodge_type)
+  - regex: location
+    examples: |
+      - (?i)(front gate|main gate|back gate|ezzamgbo|junction|nwakpu)
 
-  # - intent: provide_price
-  #   examples: |
-  #     - I can pay up to 150000
-  #     - My budget is 100000
-  #     - at most ₦250000
-  #     - around ₦80,000 naira
-  #     - not more than 120000
-  #     - I can afford 150000
-  #     - 190000
+  - regex: lodge_type
+    examples: |
+      - (?i)(self-contain|single room|bungalow)
 
-  # - intent: provide_amenities
-  #   examples: |
-  #     - I want a lodge with WiFi
-  #     - Find me a place with water and parking
-  #     - Show me lodges with balcony
-  #     - I want a place with laundry and football field
-  #     - Any lodge with air conditioning?
-  #     - Any lodge with security camera and WiFi
-  #     - Looking for a place with fenced and laundry
-  #     - Find me a place with generator and water
-  #     - Any lodge with WiFi, water, and parking?
-  #     - Looking for a place with water, fenced, and balcony
-  #     - wifi, water, light
+  - regex: price
+    examples: |
+      - (?i)(₦\s?\d{5,7}|naira\s?\d{5,7}|\d{5,7}\s?naira|\d{5,7})
 
-  # - regex: location
-  #   examples: |
-  #     - (?i)(front gate|main gate|back gate|ezzamgbo|junction|nwakpu)
+  - regex: amenities
+    examples: |
+      - (?i)\b(water|kitchen|parking(?: space)?|air conditioning|laundry|bathroom|toilet|WiFi|fenced|generator|security lights|balcony|football field|study areas|security cameras|gym)\b
 
-  # - regex: lodge_type
-  #   examples: |
-  #     - (?i)(self-contain|single room|bungalow)
+  - regex: preferences
+    examples: |
+      - (?i)\b(quiet|security|water|easy access|close to market|peaceful environment|spacious|affordable|family-friendly|comfortable|luxury|convenient|study-friendly|relaxing)\b
+

@@ -24,3 +24,5 @@ tests/
 models/
 
 runtime.txt
+
+credentials.yml
